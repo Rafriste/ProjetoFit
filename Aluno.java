@@ -41,12 +41,12 @@ public class Aluno implements Comparable <Aluno>{
 
 	public int compareTo (Aluno alu) {
         int result;
-        result = this.getMatr().compareTo(al.getMatr());
+        result = this.getMatr().compareTo(alu.getMatr());
         return result;
     }
     
     public String toString () {
-        return this.matr + " " + this.nome;
+        return this.matr + " " + this.nome + " " + this.senha;
     }
 
 	

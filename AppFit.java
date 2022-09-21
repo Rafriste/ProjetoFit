@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class AppFit {
 	
 	public static void exibeMenuPrincipal() {
-        	System.out.println("OPÇÕES:");
-			System.out.println("1 - ENTRAR COMO ALUNO");
-			System.out.println("2 - ENTRAR COMO PERSONAL");
-			System.out.println("3 - CADASTRAR ALUNO");
-			System.out.println("0 - SAIR");
+        System.out.println("OPÇÕES:");
+		System.out.println("1 - ENTRAR COMO ALUNO");
+		System.out.println("2 - ENTRAR COMO PERSONAL");
+		System.out.println("3 - CADASTRAR ALUNO");
+		System.out.println("0 - SAIR");
 	}
 	
 	public static void exibeMenuTreino() {
@@ -23,6 +23,7 @@ public class AppFit {
 		System.out.println("1 - ALTERAR TREINO A");
 		System.out.println("2 - ALTERAR TREINO B");
 		System.out.println("3 - ALTERAR TREINO C");
+		System.out.println("4 - VISUALIZAR ALUNOS");
 		System.out.println("0 - SAIR");
 	}
 
@@ -48,21 +49,24 @@ public class AppFit {
 							case 1: //imprime o treino de peito/ombro/triceps.
 									System.out.println("Treino escolhido de PEITO/OMBRO/TRICEPS");
 									treininho.treinoPOB();
+									mP = 0;
 									break;
 			
 							case 2: //imprime o treino de perna.
 									System.out.println("Treino escolhido de PERNA");
 									treininho.treinoPerna();
+									mP = 0;
 									break;
 		
 							case 3: //imprime o treino de costas/biceps.
 									System.out.println("Treino escolhido de COSTAS/BICEPS");
 									treininho.treinoCB();
+									mP = 0;
 									break;
-
+									
 							case 0:
 									System.out.println("Programa encerrado...");
-
+									
 							default: System.out.println("Opção inválida");
             			}
 						break;
@@ -71,20 +75,23 @@ public class AppFit {
 						exibeMenuPersonal();
 						adm = Al.nextInt(); Al.nextLine();
 						switch (adm) {
-							case 1: //imprime o treino de peito/ombro/triceps.
+							case 1: //Alterações do treino de peito/ombro/triceps.
 									System.out.println("Treino escolhido de PEITO/OMBRO/TRICEPS");
 									treininho.treinoPOB();
+									
 									break;
 			
-							case 2: //imprime o treino de perna.
+							case 2: //Alterações do treino de perna.
 									System.out.println("Treino escolhido de PERNA");
 									treininho.treinoPerna();
+									
 									break;
 		
-							case 3: //imprime o treino de costas/biceps.
+							case 3: //Alterações do treino de costas/biceps.
 									System.out.println("Treino escolhido de COSTAS/BICEPS");
 									treininho.treinoCB();
 									break;
+							case 4:
 
 							case 0:
 									System.out.println("Programa encerrado...");

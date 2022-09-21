@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class AcoesAluno {
     // Atributo
     private Node primeiro;
@@ -33,7 +35,7 @@ public class AcoesAluno {
         }
     }
 
-    public LSENode buscar(Aluno al) {
+    public Node buscar(Aluno alu) {
         Node aux;
         if (this.isEmpty() == true) {
             return null;
@@ -63,12 +65,45 @@ public class AcoesAluno {
             }
         }
     }
+    public void alterarTreinoA (String treino) {
+        Scanner in = new Scanner (System.in);
+        Treino aux = new Treino (treino); 
+        String novoTreino;
+        Node result = this.buscar(aux);    
+        System.out.print("Informe o novo treino desejado: ");
+        novoTreino = in.nextLine();
+        result.getInfo().setTreinoA(novoTreino);
+        System.out.println("Treino alterado!");
+          
+    }
+    public void alterarTreinoB (String treino) {
+        Scanner in = new Scanner (System.in);
+        Treino aux = new Treino (treino); 
+        String novoTreino;
+        Node result = this.buscar(aux);    
+        System.out.print("Informe o novo treino desejado: ");
+        novoTreino = in.nextLine();
+        result.getInfo().setTreinoB(novoTreino);
+        System.out.println("Treino alterado!");
+          
+    }
+    public void alterarTreinoC (String treino) {
+        Scanner in = new Scanner (System.in);
+        Treino aux = new Treino (treino); 
+        String novoTreino;
+        Node result = this.buscar(aux);    
+        System.out.print("Informe o novo treino desejado: ");
+        novoTreino = in.nextLine();
+        result.getInfo().setTreinoC(novoTreino);
+        System.out.println("Treino alterado!");
+          
+    }
 
     public void exibirEspecifico(Aluno alu){
         if (this.isEmpty() == true) {
             System.out.println("Lista vazia!");
         } else if (alu.getMatr() != null) {
-            System.out.println(alu.getNome() + " " + al.getMedia() + " " + al.getFaltas());
+            System.out.println(alu.getNome() + " " + alu.getMedia() + " " + alu.getFaltas());
         }
         
     }

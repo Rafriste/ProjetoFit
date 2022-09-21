@@ -3,10 +3,14 @@ public class Treino {
 	public String treinoA;
 	public String treinoB;
 	public String treinoC;
+	
+	public Treino(String treino){
 
+	}
 	public Treino(){
 		
 	}
+	
 	public Treino(String treinoA, String treinoB, String treinoC) {
 		this.treinoA = treinoA;
 		this.treinoB = treinoB;
