@@ -5,29 +5,43 @@ public class AppFit {
 	public static void exibeMenuPrincipal() {
 		System.out.println("OPÇÕES:");
 		System.out.println("1 - ENTRAR COMO ALUNO");
+		System.out.println("========================");
 		System.out.println("2 - ENTRAR COMO PERSONAL");
+		System.out.println("========================");
 		System.out.println("3 - CADASTRAR ALUNO");
+		System.out.println("========================");
 		System.out.println("4 - CADASTRAR PERSONAL");
+		System.out.println("========================");
 		System.out.println("0 - SAIR");
 	}
 
 	public static void exibeMenuTreino() {
 		System.out.println("OPÇÕES:");
 		System.out.println("1 - EXIBIR TREINO A (PEITO/OMBRO/TRICEPS)");
+		System.out.println("========================");
 		System.out.println("2 - EXIBIR TREINO B (PERNA)");
+		System.out.println("========================");
 		System.out.println("3 - EXIBIR TREINO C (COSTAS/BICEPS)");
+		System.out.println("========================");
 		System.out.println("0 - SAIR");
 	}
 
 	public static void exibeMenuPersonal() {
 		System.out.println("OPÇÕES:");
 		System.out.println("1 - ALTERAR TREINO A");
+		System.out.println("========================");
 		System.out.println("2 - ALTERAR TREINO B");
+		System.out.println("========================");
 		System.out.println("3 - ALTERAR TREINO C");
+		System.out.println("========================");
 		System.out.println("4 - VISUALIZAR ALUNOS");
+		System.out.println("========================");
 		System.out.println("5 - CRIAR TREINO A");
+		System.out.println("========================");
 		System.out.println("6 - CRIAR TREINO B");
+		System.out.println("========================");
 		System.out.println("7 - CRIAR TREINO C");
+		System.out.println("========================");
 		System.out.println("0 - SAIR");
 	}
 
@@ -48,7 +62,9 @@ public class AppFit {
 		String nome, matr, senha, novoTreino;
 
 		do {
+			System.out.println("=====SEJA BEM-VINDO=====");
 			exibeMenuPrincipal();
+			System.out.println("========================");
 			mP = Al.nextInt();
 			Al.nextLine();
 			switch (mP) {
@@ -60,19 +76,23 @@ public class AppFit {
 					switch (dia) {
 						case 1: // imprime o treino de peito/ombro/triceps.
 							System.out.println("Treino escolhido de PEITO/OMBRO/TRICEPS");
+							
 							System.out.println(treininho.getTreinoA());
+							System.out.println("=====BOM TREINO=====");
 							mP = 0;
 							break;
 
 						case 2: // imprime o treino de perna.
 							System.out.println("Treino escolhido de PERNA");
 							System.out.println(treininho.getTreinoB());
+							System.out.println("=====BOM TREINO=====");
 							mP = 0;
 							break;
 
 						case 3: // imprime o treino de costas/biceps.
 							System.out.println("Treino escolhido de COSTAS/BICEPS");
 							System.out.println(treininho.getTreinoC());
+							System.out.println("=====BOM TREINO=====");
 							
 							break;
 
