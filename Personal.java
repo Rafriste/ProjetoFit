@@ -1,5 +1,3 @@
-package Fit;
-
 public class Personal {
 	public String matr;
 	public String codigoPr;
