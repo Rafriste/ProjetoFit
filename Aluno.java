@@ -1,9 +1,9 @@
 public class Aluno implements Comparable <Aluno>{
     // Atributos
-    private String matr;{
+    private String matr;
 	public String nome;
 	public String senha;
-
+	//Ola
 	// Construtor
 	public Aluno (String nome, String senha, String matr){
 		this.nome = nome;
