@@ -65,7 +65,7 @@ public class AcoesAluno {
             }
         }
     }
-    public void alterarTreinoA (String treino) {
+    /*public void alterarTreinoA (String treino) {
         Scanner in = new Scanner (System.in);
         Treino aux = new Treino (treino); 
         String novoTreino;
@@ -88,7 +88,7 @@ public class AcoesAluno {
         System.out.println("Treino alterado!");
           
     }
-    
+
     public void alterarTreinoC (String treino) {
         Scanner in = new Scanner (System.in);
         Treino aux = new Treino (treino); 
@@ -99,7 +99,7 @@ public class AcoesAluno {
         result.getInfo().setTreinoC(novoTreino);
         System.out.println("Treino alterado!");
           
-    }
+    }*/
 
     public void exibirEspecifico(Aluno alu){
         if (this.isEmpty() == true) {
