@@ -7,6 +7,7 @@ public class AppFit {
 		System.out.println("1 - ENTRAR COMO ALUNO");
 		System.out.println("2 - ENTRAR COMO PERSONAL");
 		System.out.println("3 - CADASTRAR ALUNO");
+		System.out.println("4 - CADASTRAR PERSONAL");
 		System.out.println("0 - SAIR");
 	}
 
@@ -24,17 +25,22 @@ public class AppFit {
 		System.out.println("2 - ALTERAR TREINO B");
 		System.out.println("3 - ALTERAR TREINO C");
 		System.out.println("4 - VISUALIZAR ALUNOS");
-		System.out.println("5 - CRIAR TREINO");
+		System.out.println("5 - CRIAR TREINO A");
+		System.out.println("6 - CRIAR TREINO B");
+		System.out.println("7 - CRIAR TREINO C");
 		System.out.println("0 - SAIR");
 	}
 
 	public static void main(String[] args) {
 		Scanner Al = new Scanner(System.in);
-		AcoesAluno cadastro = new AcoesAluno();
+		AcoesAluno cadastroA = new AcoesAluno();
+		AcoesAluno cadastroB = new AcoesAluno();
 		int mP;
 		int adm;
 		int dia;
 		Aluno alu;
+		Personal pers;
+		String matri, nomeP, codigoPr;
 
 		String treinoOriginalA, treinoOriginalB, treinoOriginalC;
 		// Treino trei;
@@ -110,6 +116,7 @@ public class AppFit {
 							System.out.println(treininho.getTreinoC());
 							break;
 						case 4:
+							cadastroA.exibir();
 							break;
 
 						case 5:
@@ -142,7 +149,17 @@ public class AppFit {
 					System.out.println("Insira a Matricula: ");
 					matr = Al.nextLine();
 					alu = new Aluno(nome, senha, matr);
-					cadastro.inserirAluno(alu);
+					cadastroA.inserirAluno(alu);
+					break;
+				case 4:
+					System.out.print("Informe o nome do Personal: ");
+					nomeP = Al.nextLine();
+					System.out.print("Insira a senha: ");
+					codigoPr = Al.nextLine();
+					System.out.println("Insira a Matricula: ");
+					matri = Al.nextLine();
+					pers = new Personal(matri, nomeP, codigoPr);
+					cadastroB.inserirPersonal(pers);
 					break;
 			}
 

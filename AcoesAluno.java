@@ -147,5 +147,78 @@ public class AcoesAluno {
                 }
             }
         }
+        public void removerPersonal(){
+            Personal pro = new Personal(matri);
+            Node atual, anterior;
+            if (this.isEmpty() == true) {
+                System.out.println("Sem alunos");
+            } else if (this.primeiro.getProx() == null) {
+                if (pro.compareTo(this.primeiro.getInf()) == 0) {
+                    this.primeiro = null;
+                    System.out.println("Remoção efetuada");
+                } else {
+                    System.out.println("Personal não encontrado!");
+                }
+            } else { // lista com mais de um nó
+                if (pro.compareTo(this.primeiro.getInf()) == 0) { // remoção do primeiro
+                    this.primeiro = this.primeiro.getProx();
+                    System.out.println("Remoção efetuada");
+                } else {
+                    anterior = null;
+                    atual = this.primeiro;
+                    while (atual != null) {
+                       if (atual.getInf().compareTo(pro) != 0 ) {
+                        anterior = atual;
+                        atual = atual.getProx();
+                       }
+                       else {
+                           break; // achou!!!
+                       }
+                    }
+                    if (atual == null) {
+                        System.out.println("Valor não pertence a lidta!");
+                    }
+                    else {
+                        anterior.setProx(atual.getProx());
+                        System.out.println("Remoção efetuada!");
+                    }
+                }
+            }
+    }
+    public Node buscarP(Personal pers) {
+        Node aux;
+        if (this.isEmpty() == true) {
+            return null;
+        } else {
+            aux = this.primeiro;
+            while (aux != null) {
+                if (aux.getInf().compareTo(pers) == 0) {
+                    return aux;
+                } else {
+                    aux = aux.getProx();
+                }
+            }
+            return null;
+        }
+    }
+    public void inserirPersonal (Personal pers) { 
+        // verifica, usando o "buscar", se o aluno já é cadastrado.
+        Node aux = this.primeiro;
+        Node result = this.buscarP(pers);
+        if (result != null){
+            System.out.println("Personal já está na lista!");
+        } else {
+            // insere um novo aluno no final de lista de alunos
+            Node novo = new Node(pers);
+            if (this.isEmpty() == true) {
+                this.primeiro = novo;
+            } else {
+                while (aux.getProx() != null){
+                    aux = aux.getProx();
+                }
+                aux.setProx(novo);
+            }
+            System.out.println("Inserção efetuada!");
+        }
     }
 }

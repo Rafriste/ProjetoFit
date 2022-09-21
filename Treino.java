@@ -1,16 +1,11 @@
-import java.util.Scanner;
+
 
 public class Treino {
 	public String treinoA;
 	public String treinoB;
 	public String treinoC;
 	
-	treinoA = ("Loucurinha");
-
-	treinoB = ("Loucurona");
-
-	treinoC = ("Loucura");
-
+	
 	public Treino(String treino){
 
 	}

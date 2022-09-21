@@ -8,6 +8,9 @@ public class Node {
     public Node (Aluno valor) {
         this.info = valor;
     }     
+    public Node(Personal val){
+        this.inf = val;
+    }
     
     // Métodos GET e SET
     public void setInfo (Aluno valor) {
