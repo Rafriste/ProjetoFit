@@ -46,7 +46,7 @@ public class Aluno implements Comparable <Aluno>{
     }
     
     public String toString () {
-        return this.matr + " " + this.nome + " " + this.senha;
+        return "MATRICULA: " + this.matr + " NOME: " + this.nome;
     }
 
 	

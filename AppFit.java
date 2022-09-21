@@ -73,7 +73,7 @@ public class AppFit {
 						case 3: // imprime o treino de costas/biceps.
 							System.out.println("Treino escolhido de COSTAS/BICEPS");
 							System.out.println(treininho.getTreinoC());
-							mP = 0;
+							
 							break;
 
 						case 0:
@@ -84,7 +84,7 @@ public class AppFit {
 					}
 					break;
 
-				case 2: // exibindo o menu do personal
+				case 2: // exibindo o menu do personal.
 					exibeMenuPersonal();
 					adm = Al.nextInt();
 					Al.nextLine();
@@ -115,21 +115,21 @@ public class AppFit {
 							treininho.setTreinoC(novoTreino);
 							System.out.println(treininho.getTreinoC());
 							break;
-						case 4:
+						case 4: // Exibir todos os alunos.
 							cadastroA.exibir();
 							break;
 
-						case 5:
+						case 5: // Criação do treino A
 							System.out.println("Crie o treino A");
 							treinoOriginalA = Al.nextLine();
 							treininho.setTreinoA(treinoOriginalA);
 							break;
-						case 6:
+						case 6: // Criação do treino B
 							System.out.println("Crie o treino B");
 							treinoOriginalB = Al.nextLine();
 							treininho.setTreinoB(treinoOriginalB);
 							break;
-						case 7:
+						case 7: // Criação do treino C
 							System.out.println("Crie o treino C");
 							treinoOriginalC = Al.nextLine();
 							treininho.setTreinoC(treinoOriginalC);
@@ -141,7 +141,7 @@ public class AppFit {
 							System.out.println("Opção inválida");
 					}
 					break;
-				case 3: // cadastro de novo aluno
+				case 3: // cadastro de novo aluno.
 					System.out.print("Informe o nome do aluno: ");
 					nome = Al.nextLine();
 					System.out.print("Insira a senha: ");
@@ -151,7 +151,7 @@ public class AppFit {
 					alu = new Aluno(nome, senha, matr);
 					cadastroA.inserirAluno(alu);
 					break;
-				case 4:
+				case 4: // Cadastro do novo personal.
 					System.out.print("Informe o nome do Personal: ");
 					nomeP = Al.nextLine();
 					System.out.print("Insira a senha: ");

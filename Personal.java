@@ -36,7 +36,7 @@ public class Personal implements Comparable <Personal> {
         return result;
     }
 	public String toString () {
-        return this.matri + " " + this.nomeP + " " + this.codigoPr;
+        return "MATRICULA: " + this.matri + " NOME: " + this.nomeP ;
     }
 
 }
