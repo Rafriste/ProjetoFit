@@ -32,7 +32,6 @@ public class AppFit {
 		int mP;
 		int adm;
 		int dia;
-		int agenda;
 		Aluno alu;
 		Treino treininho = new Treino();
 		String nome, matr, senha;
