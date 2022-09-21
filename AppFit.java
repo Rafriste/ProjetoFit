@@ -34,7 +34,8 @@ public class AppFit {
 		int dia;
 		int agenda;
 		Aluno alu;
-		Treino treininho = new Treino(treinoPeito, treinoPerna, treinoCostas, treinoBraco);
+		Treino treininho = new Treino();
+		String nome, matr, senha;
 
 		do {
             exibeMenuPrincipal();
@@ -43,6 +44,7 @@ public class AppFit {
 				case 1: // exibindo menu do aluno
 						exibeMenuTreino();
 						dia = Al.nextInt(); Al.nextLine();
+						//
 						switch (dia) {
 							case 1: //imprime o treino de peito/ombro/triceps.
 									System.out.println("Treino escolhido de PEITO/OMBRO/TRICEPS");
@@ -96,10 +98,14 @@ public class AppFit {
                         nome = Al.nextLine();
                         System.out.print("Insira a senha: ");
                         senha = Al.nextLine();
-                        alu = new Aluno (nome, senha);
+						System.out.println("Insira a Matricula: ");
+						matr = Al.nextLine();
+                        alu = new Aluno (nome, senha, matr);
                         cadastro.inserirAluno(alu);
                         break;
-			} while (mP != 0);
-		}
+			} 
+
+			
+		}while (mP != 0);
 	}
 }
