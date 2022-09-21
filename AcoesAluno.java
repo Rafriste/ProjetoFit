@@ -76,6 +76,7 @@ public class AcoesAluno {
         System.out.println("Treino alterado!");
           
     }
+
     public void alterarTreinoB (String treino) {
         Scanner in = new Scanner (System.in);
         Treino aux = new Treino (treino); 
@@ -87,6 +88,7 @@ public class AcoesAluno {
         System.out.println("Treino alterado!");
           
     }
+    
     public void alterarTreinoC (String treino) {
         Scanner in = new Scanner (System.in);
         Treino aux = new Treino (treino); 
@@ -101,17 +103,18 @@ public class AcoesAluno {
 
     public void exibirEspecifico(Aluno alu){
         if (this.isEmpty() == true) {
-            System.out.println("Lista vazia!");
+            System.out.println("Sem alunos!");
         } else if (alu.getMatr() != null) {
-            System.out.println(alu.getNome() + " " + alu.getMedia() + " " + alu.getFaltas());
+            System.out.println(alu.getNome() + " " + alu.getSenha() + " " + alu.getMatr());
         }
         
     }
+
     public void removerAluno(){
         Aluno proc = new Aluno(matr);
         Node atual, anterior;
         if (this.isEmpty() == true) {
-            System.out.println("Lista vazia!");
+            System.out.println("Sem alunos");
         } else if (this.primeiro.getProx() == null) {
             if (proc.compareTo(this.primeiro.getInfo()) == 0) {
                 this.primeiro = null;

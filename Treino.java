@@ -1,5 +1,6 @@
+import java.util.Scanner;
 
-public class Treino {
+public class Treino implements Comparable <Treino>{
 	public String treinoA;
 	public String treinoB;
 	public String treinoC;
@@ -10,7 +11,7 @@ public class Treino {
 	public Treino(){
 		
 	}
-	
+
 	public Treino(String treinoA, String treinoB, String treinoC) {
 		this.treinoA = treinoA;
 		this.treinoB = treinoB;
@@ -65,4 +66,70 @@ public class Treino {
 		System.out.println(treino.getTreinoC());
 		
 	}
+	/*public void alterarTreinoA (String treino) {
+      //  Scanner in = new Scanner (System.in);
+      //  Treino aux = new Treino (treino); 
+      //  String novoTreino;
+      //  Node result = this.buscar(aux);    
+      //  System.out.print("Informe o novo treino desejado: ");
+      //  novoTreino = in.nextLine();
+      //  result.getInfo().setTreinoA(novoTreino);
+      //  System.out.println("Treino alterado!");
+          
+   // }
+
+    //public void alterarTreinoB (String treino) {
+      //  Scanner in = new Scanner (System.in);
+        Treino aux = new Treino (treino); 
+        String novoTreino;
+        Node result = this.buscar(aux);    
+        System.out.print("Informe o novo treino desejado: ");
+        novoTreino = in.nextLine();
+        result.getInfo().setTreinoB(novoTreino);
+        System.out.println("Treino alterado!");
+          
+    }
+    
+    public void alterarTreinoC (String treino) {
+        Scanner in = new Scanner (System.in);
+        Treino aux = new Treino (treino); 
+        String novoTreino;
+        Node result = this.buscar(aux);    
+        System.out.print("Informe o novo treino desejado: ");
+        novoTreino = in.nextLine();
+        result.getInfo().setTreinoC(novoTreino);
+        System.out.println("Treino alterado!");
+          
+    }
+	public Node buscar(Treino trei) {
+        Node aux;
+        if (this.isEmpty() == true) {
+            return null;
+        } else {
+            aux = this.primeiro;
+            while (aux != null) {
+                if (aux.getTr().compareTo(trei) == 0) {
+                    return aux;
+                } else {
+                    aux = aux.getProx();
+                }
+            }
+            return null;
+        }
+    }
+	public String compareTo (Treino trei) {
+        String result;
+        result = this.getTreinoA().compareTo(trei.getTreinoA());
+        return result;
+    }
+	public String compareTo (Treino trei) {
+        String result;
+        result = this.getTreinoB().compareTo(trei.getTreinoB());
+        return result;
+    }
+	public String compareTo (Treino trei) {
+        String result;
+        result = this.getTreinoC().compareTo(trei.getTreinoC());
+        return result;
+    }*/
 }

@@ -26,7 +26,7 @@ public class AppFit {
 		System.out.println("4 - VISUALIZAR ALUNOS");
 		System.out.println("0 - SAIR");
 	}
-
+	
 	public static void main(String[] args) {
 		Scanner Al = new Scanner(System.in);
 		AcoesAluno cadastro = new AcoesAluno();
@@ -34,8 +34,9 @@ public class AppFit {
 		int adm;
 		int dia;
 		Aluno alu;
+		//Treino trei;
 		Treino treininho = new Treino();
-		String nome, matr, senha;
+		String nome, matr, senha, novoTreino;
 
 		do {
             exibeMenuPrincipal();
@@ -48,7 +49,7 @@ public class AppFit {
 						switch (dia) {
 							case 1: //imprime o treino de peito/ombro/triceps.
 									System.out.println("Treino escolhido de PEITO/OMBRO/TRICEPS");
-									treininho.treinoPOB();
+									treininho.treinoA();
 									mP = 0;
 									break;
 			
@@ -76,20 +77,30 @@ public class AppFit {
 						adm = Al.nextInt(); Al.nextLine();
 						switch (adm) {
 							case 1: //Alterações do treino de peito/ombro/triceps.
-									System.out.println("Treino escolhido de PEITO/OMBRO/TRICEPS");
-									treininho.treinoPOB();
+									System.out.println("Treino escolhido para mudar A - (PEITO/OMBRO/TRICEPS)");
+									System.out.println("Insira o novo treino A: ");
+									novoTreino = Al.nextLine();
+									treininho.setTreinoA(novoTreino);
+									System.out.println(treininho.getTreinoA()); 
 									
 									break;
 			
 							case 2: //Alterações do treino de perna.
-									System.out.println("Treino escolhido de PERNA");
-									treininho.treinoPerna();
+									System.out.println("Treino escolhido para mudar B - (PERNA)");
 									
+									System.out.println("Insira novo treino B: ");
+									novoTreino = Al.nextLine();
+									treininho.setTreinoB(novoTreino);
+									System.out.println(treininho.getTreinoB()); 
+																	
 									break;
 		
 							case 3: //Alterações do treino de costas/biceps.
-									System.out.println("Treino escolhido de COSTAS/BICEPS");
-									treininho.treinoCB();
+									System.out.println("Treino escolhido para mudar C - (COSTAS/BICEPS)");
+									System.out.println("Insira novo treino C: ");
+									novoTreino = Al.nextLine();
+									treininho.setTreinoC(novoTreino);
+									System.out.println(treininho.getTreinoC());
 									break;
 							case 4:
 
