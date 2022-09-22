@@ -139,7 +139,7 @@ public class AcoesAluno {
                    }
                 }
                 if (atual == null) {
-                    System.out.println("Valor não pertence a lidta!");
+                    System.out.println("Aluno não pertence a academia!");
                 }
                 else {
                     anterior.setProx(atual.getProx());
