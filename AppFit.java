@@ -5,7 +5,7 @@ public class AppFit {
 
 	public static void exibeMenuPrincipal() {
 		System.out.println("========================");
-		System.out.println("OPÇÕES:");
+		System.out.println("	 OPÇÕES        ");
 		System.out.println("========================");
 		System.out.println("1 - ENTRAR COMO ALUNO");
 		System.out.println("========================");
@@ -21,7 +21,7 @@ public class AppFit {
 
 	public static void exibeMenuTreino() {
 		System.out.println("========================");
-		System.out.println("OPÇÕES:");
+		System.out.println("	 OPÇÕES        ");
 		System.out.println("========================");
 		System.out.println("1 - EXIBIR TREINO A (PEITO/OMBRO/TRICEPS)");
 		System.out.println("========================");
@@ -35,7 +35,7 @@ public class AppFit {
 
 	public static void exibeMenuPersonal() {
 		System.out.println("========================");
-		System.out.println("OPÇÕES:");
+		System.out.println("	 OPÇÕES        ");
 		System.out.println("========================");
 		System.out.println("1 - ALTERAR TREINO A");
 		System.out.println("========================");
