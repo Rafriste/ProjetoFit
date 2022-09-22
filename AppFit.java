@@ -76,7 +76,6 @@ public class AppFit {
 		do {
 			System.out.println("=====SEJA BEM-VINDO=====");
 			exibeMenuPrincipal();
-			System.out.println("========================");
 			mP = Al.nextInt();
 			Al.nextLine();
 			switch (mP) {
