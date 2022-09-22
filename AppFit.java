@@ -1,8 +1,10 @@
+import java.net.SocketTimeoutException;
 import java.util.Scanner;
 
 public class AppFit {
 
 	public static void exibeMenuPrincipal() {
+		System.out.println("========================");
 		System.out.println("OPÇÕES:");
 		System.out.println("========================");
 		System.out.println("1 - ENTRAR COMO ALUNO");
@@ -14,9 +16,11 @@ public class AppFit {
 		System.out.println("4 - CADASTRAR PERSONAL");
 		System.out.println("========================");
 		System.out.println("0 - SAIR");
+		System.out.println("========================");
 	}
 
 	public static void exibeMenuTreino() {
+		System.out.println("========================");
 		System.out.println("OPÇÕES:");
 		System.out.println("========================");
 		System.out.println("1 - EXIBIR TREINO A (PEITO/OMBRO/TRICEPS)");
@@ -26,9 +30,11 @@ public class AppFit {
 		System.out.println("3 - EXIBIR TREINO C (COSTAS/BICEPS)");
 		System.out.println("========================");
 		System.out.println("0 - SAIR");
+		System.out.println("========================");
 	}
 
 	public static void exibeMenuPersonal() {
+		System.out.println("========================");
 		System.out.println("OPÇÕES:");
 		System.out.println("========================");
 		System.out.println("1 - ALTERAR TREINO A");
@@ -45,7 +51,10 @@ public class AppFit {
 		System.out.println("========================");
 		System.out.println("7 - CRIAR TREINO C");
 		System.out.println("========================");
+		System.out.println("8 - VIZUALIZAR TODOS OS TREINOS");
+		System.out.println("========================");
 		System.out.println("0 - SAIR");
+		System.out.println("========================");
 	}
 
 	public static void main(String[] args) {
@@ -156,6 +165,17 @@ public class AppFit {
 							System.out.println("Crie o treino C");
 							treinoOriginalC = Al.nextLine();
 							treininho.setTreinoC(treinoOriginalC);
+							break;
+						case 8: // Vizualização de todos os treinos
+							System.out.println("Treino A: ");
+							treininho.getTreinoA();
+							System.out.println(" ");
+							System.out.println("Treino B: ");
+							treininho.getTreinoB();
+							System.out.println(" ");
+							System.out.println("Treino C: ");
+							treininho.getTreinoC();
+							System.out.println(" ");
 							break;
 						case 0:
 							System.out.println("Programa encerrado...");
