@@ -16,6 +16,9 @@ public class Botao extends JFrame {
     private JPanel jpnInfo;
     private JLabel jlbInfo;
 
+    private JPanel jpnNomeEstabelecimento;
+    private JLabel jlbEstabelecimento;
+
     public Botao() {
         super();
         this.configurarFrame();
