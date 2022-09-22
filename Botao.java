@@ -1,18 +1,19 @@
 import javax.swing.JFrame;
-import javax.swing.JButton;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 
 public class Botao extends JFrame {
-    private JButton ok;
-    private JButton cancelar;
 
     public Botao() {
-        super("Criando botões");
-        setLayout(new FlowLayout());
+        super();
+        this.configurarFrame();
+    }
 
-        ok = new JButton("OK");
-        cancelar = new JButton("Cancelar");
-        add(ok);
-        add(cancelar);
+    private void configurarFrame(){
+        this.setTitle("janela com painel");
+        this.setPreferredSize(new Dimension(500,250));
+        this.setLayout(new FlowLayout());
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
     }
 }
