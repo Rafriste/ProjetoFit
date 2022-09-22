@@ -177,9 +177,9 @@ public class AppFit {
 				case 4: // Cadastro do novo personal.
 					System.out.print("Informe o nome do Personal: ");
 					nomeP = Al.nextLine();
-					System.out.print("Insira a senha: ");
+					System.out.print("Insira a codigo: ");
 					codigoPr = Al.nextLine();
-					System.out.println("Insira a Matricula: ");
+					System.out.println("Insira a matricula: ");
 					matri = Al.nextLine();
 					pers = new Personal(matri, nomeP, codigoPr);
 					cadastroB.inserirPersonal(pers);
