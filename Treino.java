@@ -19,7 +19,7 @@ public class Treino {
 		this.treinoB = treinoB;
 		this.treinoC = treinoC;
 	} 
-	
+
 
 	public String getTreinoA() {
 		return treinoA;
