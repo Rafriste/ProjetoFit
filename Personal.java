@@ -1,8 +1,4 @@
-public class Personal implements Comparable <Personal> {
-	public String matri;
-	public String codigoPr;
-	public String nomeP;
-	
+public class Personal extends InfoPessoal implements Comparable <Personal> {
 
 	public Personal(String matri, String nomeP, String codigoPr){
 		this.matri = matri;

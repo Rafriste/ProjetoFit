@@ -1,4 +1,4 @@
-public class Aluno implements Comparable <Aluno>{
+public class Aluno extends InfoPessoal implements Comparable <Aluno>{
     // Atributos
     private String matr;
 	public String nome;
