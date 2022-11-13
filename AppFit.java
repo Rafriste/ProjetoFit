@@ -68,11 +68,12 @@ public class AppFit {
 		Personal pers;
 		String matr, nome, senha;
 		int DiaMalhado = 0;
+		int DiaTrabalhado = 0;
 		String treinoOriginalA, treinoOriginalB, treinoOriginalC;
 		// Treino trei;
 		Treino treininho = new Treino();
 		String novoTreino;
-
+		
 		do {
 			System.out.println("=====SEJA BEM-VINDO=====");
 			exibeMenuPrincipal();
@@ -113,19 +114,20 @@ public class AppFit {
 							System.out.println("Dias malhados: " + DiaMalhado);
 							break;
 
-						case 0:
-							System.out.println("Programa encerrado...");
-
 						default:
 							System.out.println("Opção inválida");
 					}
 					break;
 
+
 				case 2: // exibindo o menu do personal.
 					exibeMenuPersonal();
 					adm = Al.nextInt();
 					Al.nextLine();
+					DiaTrabalhado ++;
+					System.out.println("Dias Trabalhados: " + DiaTrabalhado);
 					switch (adm) {
+						
 						case 1: // Alterações do treino de peito/ombro/triceps.
 							System.out.println("Treino escolhido para mudar A - (PEITO/OMBRO/TRICEPS)");
 							System.out.println("Insira o novo treino A: ");
