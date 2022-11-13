@@ -4,7 +4,7 @@ public class Treino {
 	public String treinoA;
 	public String treinoB;
 	public String treinoC;
-	
+	public int DiaMalhado = 0;
 	
 	public Treino(String treino){
 
@@ -44,26 +44,17 @@ public class Treino {
 	public void setTreinoC(String treinoC) {
 		this.treinoC = treinoC;
 	}
-	/* 
-	public void treinoPOB(){
-		Treino treinoPOB = new Treino();
-		
-		treinoPOB.setTreinoA("Supito Reto 3 - 8/10, Supino inclinado 3 - 10/12, Fly 3 - 10/12, Crucifixo 3 - 10/12, Triceps corda 3 - 10/12, Triceps testa 3 - 10/12");
-		System.out.println(treinoPOB.getTreinoA());
+
+	public int getDiaMalhado() {
+		return DiaMalhado;
 	}
-
-	public void treinoPerna(){
-		Treino treinoPerna = new Treino();
-		treinoPerna.setTreinoB("Agachamento 3 - 8/10, Leg 45° 3 - 8/10, Extensora 3 - 8/10, Flexora 3 - 8/10, Terra 3 - 8/10");
-		System.out.println(treinoPerna.getTreinoB());
+	public void setDiaMalhado(int diaMalhado) {
+		DiaMalhado = diaMalhado;
 	}
-
-	public void treinoCB(){
-		Treino treinoCB = new Treino();
-		treinoCB.setTreinoC("Puxada pronada 3 - 8/10, Puxada supinada 3 - 8/10, Pull-down 3 - 8/10, Rosca direta 3 - 8/10, Rosca alternada 3 - 8/10");
-		System.out.println(treinoCB.getTreinoC());
-	}*/
-
+	
+	public void diaMalhado(int DiaMalhado){
+		DiaMalhado ++;
+	}
 	public static void Treininheos() {
 		Treino treino = new Treino("Supito Reto 3 - 8/10, Supino inclinado 3 - 10/12, Fly 3 - 10/12, Crucifixo 3 - 10/12, Triceps corda 3 - 10/12, Triceps testa 3 - 10/12" , "Agachamento 3 - 8/10, Leg 45° 3 - 8/10, Extensora 3 - 8/10, Flexora 3 - 8/10, Terra 3 - 8/10", "Puxada pronada 3 - 8/10, Puxada supinada 3 - 8/10, Pull-down 3 - 8/10, Rosca direta 3 - 8/10, Rosca alternada 3 - 8/10");
 		System.out.println(treino.getTreinoA());
@@ -136,5 +127,25 @@ public class Treino {
         String result;
         result = this.getTreinoC().compareTo(trei.getTreinoC());
         return result;
-    }*/
+
+	}*/
+	/* 
+	public void treinoPOB(){
+		Treino treinoPOB = new Treino();
+		
+		treinoPOB.setTreinoA("Supito Reto 3 - 8/10, Supino inclinado 3 - 10/12, Fly 3 - 10/12, Crucifixo 3 - 10/12, Triceps corda 3 - 10/12, Triceps testa 3 - 10/12");
+		System.out.println(treinoPOB.getTreinoA());
+	}
+
+	public void treinoPerna(){
+		Treino treinoPerna = new Treino();
+		treinoPerna.setTreinoB("Agachamento 3 - 8/10, Leg 45° 3 - 8/10, Extensora 3 - 8/10, Flexora 3 - 8/10, Terra 3 - 8/10");
+		System.out.println(treinoPerna.getTreinoB());
+	}
+
+	public void treinoCB(){
+		Treino treinoCB = new Treino();
+		treinoCB.setTreinoC("Puxada pronada 3 - 8/10, Puxada supinada 3 - 8/10, Pull-down 3 - 8/10, Rosca direta 3 - 8/10, Rosca alternada 3 - 8/10");
+		System.out.println(treinoCB.getTreinoC());
+	}*/
 }
