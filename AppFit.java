@@ -66,12 +66,12 @@ public class AppFit {
 		int dia;
 		Aluno alu;
 		Personal pers;
-		String matri, nomeP, codigoPr;
-
+		String matr, nome, senha;
+		int DiaMalhado = 0;
 		String treinoOriginalA, treinoOriginalB, treinoOriginalC;
 		// Treino trei;
 		Treino treininho = new Treino();
-		String nome, matr, senha, novoTreino;
+		String novoTreino;
 
 		do {
 			System.out.println("=====SEJA BEM-VINDO=====");
@@ -90,14 +90,18 @@ public class AppFit {
 							
 							System.out.println(treininho.getTreinoA());
 							System.out.println("=====BOM TREINO=====");
-							mP = 0;
+							
+							DiaMalhado ++;
+							System.out.println("Dias malhados: " + DiaMalhado);
 							break;
 
 						case 2: // imprime o treino de perna.
 							System.out.println("Treino escolhido de PERNA");
 							System.out.println(treininho.getTreinoB());
 							System.out.println("=====BOM TREINO=====");
-							mP = 0;
+							
+							DiaMalhado ++;
+							System.out.println("Dias malhados: " + DiaMalhado);
 							break;
 
 						case 3: // imprime o treino de costas/biceps.
@@ -105,6 +109,8 @@ public class AppFit {
 							System.out.println(treininho.getTreinoC());
 							System.out.println("=====BOM TREINO=====");
 							
+							DiaMalhado ++;
+							System.out.println("Dias malhados: " + DiaMalhado);
 							break;
 
 						case 0:
@@ -186,21 +192,21 @@ public class AppFit {
 				case 3: // cadastro de novo aluno.
 					System.out.print("Informe o nome do aluno: ");
 					nome = Al.nextLine();
-					System.out.print("Insira a senha: ");
+					System.out.print("Insira a senha do aluno: ");
 					senha = Al.nextLine();
-					System.out.println("Insira a Matricula: ");
+					System.out.println("Insira a matricula do aluno: ");
 					matr = Al.nextLine();
 					alu = new Aluno(nome, senha, matr);
 					cadastroA.inserirAluno(alu);
 					break;
 				case 4: // Cadastro do novo personal.
 					System.out.print("Informe o nome do Personal: ");
-					nomeP = Al.nextLine();
-					System.out.print("Insira a codigo: ");
-					codigoPr = Al.nextLine();
-					System.out.println("Insira a matricula: ");
-					matri = Al.nextLine();
-					pers = new Personal(matri, nomeP, codigoPr);
+					nome = Al.nextLine();
+					System.out.print("Insira a senha do personal: ");
+					senha = Al.nextLine();
+					System.out.println("Insira a matricula do personal: ");
+					matr = Al.nextLine();
+					pers = new Personal(matr, nome, senha);
 					cadastroB.inserirPersonal(pers);
 					break;
 			}

@@ -1,38 +1,40 @@
 public class Personal extends InfoPessoal implements Comparable <Personal> {
 
-	public Personal(String matri, String nomeP, String codigoPr){
-		this.matri = matri;
-		this.codigoPr = codigoPr;
-		this.nomeP = nomeP;
+	public int diaTrabalhado;
+
+	public Personal(String matr, String nome, String senha){
+		this.matr = matr;
+		this.senha = senha;
+		this.nome = nome;
 	}
 	public Personal(String m){
-		this.matri = m;
+		this.matr = m;
 	}
-	public String getCodigoPr() {
-		return codigoPr;
+	public String getSenha() {
+		return senha;
 	}
-	public String getMatri() {
-		return matri;
+	public String getMatr() {
+		return matr;
 	}
-	public void setCodigoPr(String codigoPr) {
-		this.codigoPr = codigoPr;
+	public void setsenha(String senha) {
+		this.senha = senha;
 	}
-	public void setMatri(String matri) {
-		this.matri = matri;
+	public void setMatr(String matr) {
+		this.matr = matr;
 	}
-	public String getNomeP() {
-		return nomeP;
+	public String getNome() {
+		return nome;
 	}
-	public void setNomeP(String nomeP) {
-		this.nomeP = nomeP;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 	public int compareTo (Personal pers) {
         int result;
-        result = this.getMatri().compareTo(pers.getMatri());
+        result = this.getMatr().compareTo(pers.getMatr());
         return result;
     }
 	public String toString () {
-        return "MATRICULA: " + this.matri + " NOME: " + this.nomeP ;
+        return "MATRICULA: " + this.matr + " NOME: " + this.nome ;
     }
 
 }

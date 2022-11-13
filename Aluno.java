@@ -1,8 +1,6 @@
 public class Aluno extends InfoPessoal implements Comparable <Aluno>{
     // Atributos
-    private String matr;
-	public String nome;
-	public String senha;
+	public int diasMalhado;
 	//Ola
 	// Construtor
 	public Aluno (String nome, String senha, String matr){
