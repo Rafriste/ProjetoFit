@@ -1,4 +1,4 @@
-import InfoPessoal;
+import Negocio.Aluno.InfoPessoal;
 
 package Negocio.Pesonal;
 public class Personal extends InfoPessoal implements Comparable <Personal> {
