@@ -42,6 +42,14 @@ public class GerenciarTreino {
         return null;
     }
 
+    public void exibirTreino(int matr){
+        for (int i = 0; i < treinoLista.size(); i++) {
+            Treino t = treinoLista.get(i);
+             System.out.println(t.toString());
+        }
+       
+    }
+    
     public void exibirTreinos() {
         System.out.println(treinoLista);
     }
