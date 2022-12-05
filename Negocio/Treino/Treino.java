@@ -38,4 +38,8 @@ public class Treino {
 		this.matr = matr;
 	}
 
+	public boolean treinoIniciado(){
+		return true;
+	}
+
 }

@@ -1,43 +1,41 @@
-import Negocio.Aluno.InfoPessoal;
-
 package Negocio.Pesonal;
-public class Personal extends InfoPessoal implements Comparable <Personal> {
 
-	public int diaTrabalhado;
+public class Personal {
+	public String nome;
+	public String senha;
+	public int matr;
 
-	public Personal(String matr, String nome, String senha){
-		this.matr = matr;
-		this.senha = senha;
+	public Personal(String nome, String senha, int matr) {
 		this.nome = nome;
+		this.senha = senha;
+		this.matr = matr;
 	}
-	public Personal(String m){
-		this.matr = m;
+
+	public Personal(int matr) {
+		this.matr = matr;
 	}
-	public String getSenha() {
-		return senha;
-	}
-	public String getMatr() {
+
+	public int getMatr() {
 		return matr;
 	}
-	public void setsenha(String senha) {
-		this.senha = senha;
-	}
-	public void setMatr(String matr) {
-		this.matr = matr;
-	}
+
 	public String getNome() {
 		return nome;
 	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setMatr(int matr) {
+		this.matr = matr;
+	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public int compareTo (Personal pers) {
-        int result;
-        result = this.getMatr().compareTo(pers.getMatr());
-        return result;
-    }
-	public String toString () {
-        return "MATRICULA: " + this.matr + " NOME: " + this.nome ;
-    }
 
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
 }

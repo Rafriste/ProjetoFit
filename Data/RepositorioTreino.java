@@ -2,6 +2,7 @@ package Data;
 
 import java.util.ArrayList;
 
+import Negocio.Exception.TreinoNaoEncontradoException;
 import Negocio.Treino.Treino;
 
 public class RepositorioTreino {
@@ -22,17 +23,17 @@ public class RepositorioTreino {
 
     public void adicionarTreino(Treino treinoNovo) {
         if (!treinoExistente(treinoNovo.getMatr())) {
-            treinoLista.add(new Aluno(treinoNovo.getMatr()));
+            treinoLista.add(new Treino(treinoNovo.getMatr(), treinoNovo.getTreino()));
         }
     }
 
-    public Aluno buscarAluno(int matr) throws Exception {
-        if (!alunoExistente(matr)) {
-            throw new AlunoNaoEncontradoException();
+    public Treino buscarTreino(int matr) throws Exception {
+        if (!treinoExistente(matr)) {
+            throw new TreinoNaoEncontradoException();
         }
-        for (Aluno checarAluno : alunoLista) {
-            if (checarAluno.getMatr() == matr) {
-                return checarAluno;
+        for (Treino checarTreino: treinoLista) {
+            if (checarTreino.getMatr() == matr) {
+                return checarTreino;
             }
 
         }
@@ -41,7 +42,7 @@ public class RepositorioTreino {
 
     @Override
     public String toString() {
-        return "GerenciarAluno [Lista de alunos cadastrados : " + alunoLista + "]";
+        return "GerenciarTreino [Lista de treinos cadastrados : " + treinoLista + "]";
     }
 
 }
