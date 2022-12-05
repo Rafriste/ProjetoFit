@@ -41,5 +41,8 @@ public class Treino {
 	public boolean treinoIniciado(){
 		return true;
 	}
-
+	
+	public String toString () {
+        return "MATRICULA: " + this.matr + " TREINO: " + this.treino;
+    }
 }

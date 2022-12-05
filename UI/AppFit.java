@@ -117,7 +117,7 @@ public class AppFit {
 								fachada.excluirTreino(treinoBuscado);
 								System.out.println(" ");
 								System.out.println("Insira o novo treino: ");
-								treino = Al.nextLine(); Al.next();
+								treino = Al.next();
 								trei = new Treino(matrAluno, treino);
 								fachada.adicionarTreino(trei);
 								break;
@@ -129,7 +129,7 @@ public class AppFit {
 								matrAluno = Al.nextInt();
 								System.out.println(" ");
 								System.out.println("Insira o treino: ");
-								treino = Al.nextLine(); Al.next();
+								treino = Al.next();
 								trei = new Treino(matrAluno, treino);
 								fachada.adicionarTreino(trei);
 								break;
