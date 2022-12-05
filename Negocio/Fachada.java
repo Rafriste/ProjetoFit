@@ -2,8 +2,10 @@ package Negocio;
 
 import Negocio.Aluno.Aluno;
 import Negocio.Aluno.GerenciarAluno;
-import Negocio.Pesonal.GerenciarPersonal;
+import Negocio.Personal.GerenciarPersonal;
+import Negocio.Personal.Personal;
 import Negocio.Treino.GerenciarTreino;
+import Negocio.Treino.Treino;
 
 public class Fachada implements IFachada {
   private GerenciarAluno gAluno;
@@ -21,27 +23,32 @@ public class Fachada implements IFachada {
     this.gAluno.adicionarUsuario(aluno);
   }
 
+  public void adicionarPerso(Personal personal) {
+    this.gPersonal.adicionarPerso(personal);
+  }
+
+  public void adicionarTreino(Treino treino) {
+    this.gTreino.adicionarTreino(treino);
+  }
+
   @Override
   public Aluno buscarAluno(int matr) throws Exception {
     return this.gAluno.buscarAluno(matr);
   }
 
-  @Override
-  public void adicionarPedido(Pedido pedido) {
-    gTreino.adicionarPedido(pedido);
+  public Personal buscarPersonal(int matr) throws Exception {
+    return this.gPersonal.buscarPersonal(matr);
   }
 
-  @Override
-  public void excluirPedido(Pedido pedido) {
-    // TODO Auto-generated method stub
+  public Treino buscarTreino(int matr) throws Exception {
+    return this.gTreino.buscarTreino(matr);
+  }
+
+  public void excluirTreino(Treino treino) {
+    this.gTreino.excluirTreino(treino);
   }
 
   public String toString() {
     return gTreino.toString();
-  }
-
-  @Override
-  public Treino buscarPedido(int nTreino) throws Exception {
-    return gTreino.buscarTreino(nTreino);
   }
 }

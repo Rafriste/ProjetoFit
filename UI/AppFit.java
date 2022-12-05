@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import Negocio.Aluno.AcoesAluno;
 import Negocio.Aluno.Aluno;
-import Negocio.Pesonal.Personal;
+import Negocio.Personal.Personal;
 import Negocio.Treino.Treino;
 
 public class AppFit {

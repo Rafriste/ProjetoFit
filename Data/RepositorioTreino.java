@@ -8,9 +8,9 @@ import Negocio.Treino.Treino;
 public class RepositorioTreino {
     private ArrayList<Treino> treinoLista;
 
-  public RepositorioTreino() {
-    this.treinoLista = new ArrayList();
-  }
+    public RepositorioTreino() {
+        this.treinoLista = new ArrayList();
+    }
 
     public boolean treinoExistente(int matr) {
         for (Treino checarTreino : treinoLista) {
@@ -27,11 +27,15 @@ public class RepositorioTreino {
         }
     }
 
+    public void excluirTreino(Treino treinoAExcluir) {
+        treinoLista.remove(treinoAExcluir);
+    }
+
     public Treino buscarTreino(int matr) throws Exception {
         if (!treinoExistente(matr)) {
             throw new TreinoNaoEncontradoException();
         }
-        for (Treino checarTreino: treinoLista) {
+        for (Treino checarTreino : treinoLista) {
             if (checarTreino.getMatr() == matr) {
                 return checarTreino;
             }

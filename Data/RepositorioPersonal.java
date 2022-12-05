@@ -2,7 +2,7 @@ package Data;
 
 import java.util.ArrayList;
 
-import Negocio.Pesonal.Personal;
+import Negocio.Personal.Personal;
 
 public class RepositorioPersonal {
     private ArrayList<Personal> personalLista;
@@ -26,7 +26,7 @@ public class RepositorioPersonal {
         }
     }
 
-    public Personal buscarAluno(int matr) throws Exception {
+    public Personal buscarPersonal(int matr) throws Exception {
         if (!personalExistente(matr)) {
             throw new PersonalNaoEncontradoException();
         }

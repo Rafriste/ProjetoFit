@@ -1,25 +1,27 @@
 package Negocio.Treino;
 
-import Data.RepositorioAluno;
+import Data.RepositorioTreino;
 
 public class GerenciarTreino {
-    public class GerenciarAluno {
-        private RepositorioAluno rTreino;
+    private RepositorioTreino rTreino;
 
-        public boolean treinoExistente(int matr) {
-            return rTreino.treinoExistente(matr);
-        }
+    public boolean treinoExistente(int matr) {
+        return rTreino.treinoExistente(matr);
+    }
 
-        public void adicionarTreino(Treino treinoNovo) {
-            rTreino.adicionarTreino(treinoNovo);
-        }
+    public void adicionarTreino(Treino treinoNovo) {
+        rTreino.adicionarTreino(treinoNovo);
+    }
 
-        public Treino buscarTreino(int matr) throws Exception {
-            return rTreino.buscarTreino(matr);
-        }
+    public Treino buscarTreino(int matr) throws Exception {
+        return rTreino.buscarTreino(matr);
+    }
 
-        public String toString() {
-            return rTreino.toString();
-        }
+    public void excluirTreino(Treino treinoAExcluir) {
+        rTreino.excluirTreino(treinoAExcluir);
+    }
+
+    public String toString() {
+        return rTreino.toString();
     }
 }

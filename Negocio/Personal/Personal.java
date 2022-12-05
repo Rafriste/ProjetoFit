@@ -1,4 +1,4 @@
-package Negocio.Pesonal;
+package Negocio.Personal;
 
 public class Personal {
 	public String nome;
