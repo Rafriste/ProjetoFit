@@ -19,6 +19,8 @@ public interface IFachada {
 
   public void excluirTreino(Treino treino);
 
+  public void exibirTreino(int matr);
+
   public void exibirTreinos();
 
   public void exibirAlunos();

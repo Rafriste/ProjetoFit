@@ -54,6 +54,10 @@ public class Fachada implements IFachada {
     gAluno.exibirAlunos();
   }
 
+  public void exibirTreino(int matr){
+    this.gTreino.exibirTreino(matr);
+  }
+
   public String toString() {
     return gTreino.toString();
   }

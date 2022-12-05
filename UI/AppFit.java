@@ -84,9 +84,9 @@ public class AppFit {
 						Al.nextLine();
 						switch (dia) {
 							case 1: // imprime o treino
-								Treino treinoBuscado = fachada.buscarTreino(matr);
-								treinoBuscado.toString();
-								System.out.println("");
+								
+								fachada.exibirTreino(matr);
+								
 								System.out.println("=====BOM TREINO=====");
 								DiaMalhado++;
 								System.out.println("Dias malhados: " + DiaMalhado);
