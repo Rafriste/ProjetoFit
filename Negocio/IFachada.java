@@ -1,20 +1,21 @@
 package Negocio;
 
+import Negocio.Aluno.Aluno;
 import Negocio.Aluno.GerenciarAluno;
+import Negocio.Treino.Treino;
 
 public interface IFachada {
-    public void adicionarUsuario(Cliente cliente);
+  public void adicionarUsuario(Aluno cliente);
 
-  public Cliente buscarCliente(int cpf) throws Exception;
+  public Aluno buscarAluno(int matr) throws Exception;
 
-  public void adicionarPedido(Pedido pedido);
+  public void adicionarTreino(Treino pedido);
 
   public void exibirItens();
 
   public void fecharMesa();
 
-  public void excluirPedido(Pedido pedido);
+  public void excluirPedido(Treino treino);
 
-  public Pedido buscarPedido(int nPedido) throws Exception;
-
+  public Treino buscarPedido(int nTreino) throws Exception;
 }

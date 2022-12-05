@@ -23,45 +23,25 @@ public class Fachada implements IFachada {
 
   @Override
   public Aluno buscarAluno(int matr) throws Exception {
-
     return this.gAluno.buscarAluno(matr);
-
   }
 
   @Override
   public void adicionarPedido(Pedido pedido) {
-
-    gPedidos.adicionarPedido(pedido);
-  }
-
-  @Override
-  public void exibirItens() {
-    gDeItems.exibirItens();
-
-  }
-
-  @Override
-  public void fecharMesa() {
-
-    gPedidos.fecharMesa();
-
+    gTreino.adicionarPedido(pedido);
   }
 
   @Override
   public void excluirPedido(Pedido pedido) {
     // TODO Auto-generated method stub
-
   }
 
   public String toString() {
-
-    return gPedidos.toString();
+    return gTreino.toString();
   }
 
   @Override
-  public Pedido buscarPedido(int nPedido) throws Exception {
-
-    return gPedidos.buscarPedido(nPedido);
+  public Treino buscarPedido(int nTreino) throws Exception {
+    return gTreino.buscarTreino(nTreino);
   }
-
 }
