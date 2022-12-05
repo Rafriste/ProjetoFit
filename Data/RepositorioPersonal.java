@@ -2,6 +2,7 @@ package Data;
 
 import java.util.ArrayList;
 
+import Negocio.Exception.PersonalNaoEncontradoException;
 import Negocio.Personal.Personal;
 
 public class RepositorioPersonal {
@@ -20,7 +21,7 @@ public class RepositorioPersonal {
         return false;
     }
 
-    public void adicionarUsuario(Personal personalNovo) {
+    public void adicionarPerso(Personal personalNovo) {
         if (!personalExistente(personalNovo.getMatr())) {
             personalLista.add(new Personal(personalNovo.getNome(), personalNovo.getSenha(), personalNovo.getMatr()));
         }

@@ -40,6 +40,10 @@ public class RepositorioAluno {
     return null;
   }
 
+  public void exibirAlunos() {
+    System.out.println(alunoLista);
+}
+
   @Override
   public String toString() {
     return "GerenciarAluno [Lista de alunos cadastrados : " + alunoLista + "]";

@@ -1,7 +1,6 @@
 package Negocio.Aluno;
 
 import Data.RepositorioAluno;
-import Negocio.Exception.Exception;
 
 public class GerenciarAluno {
   private RepositorioAluno rAluno;
@@ -16,6 +15,10 @@ public class GerenciarAluno {
 
   public Aluno buscarAluno(int matr) throws Exception {
     return rAluno.buscarAluno(matr);
+  }
+
+  public void exibirAlunos() {
+    rAluno.exibirAlunos();
   }
 
   public String toString() {

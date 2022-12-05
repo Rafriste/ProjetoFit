@@ -44,6 +44,10 @@ public class RepositorioTreino {
         return null;
     }
 
+    public void exibirTreinos() {
+        System.out.println(treinoLista);
+    }
+
     @Override
     public String toString() {
         return "GerenciarTreino [Lista de treinos cadastrados : " + treinoLista + "]";

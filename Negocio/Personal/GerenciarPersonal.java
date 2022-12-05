@@ -1,7 +1,6 @@
 package Negocio.Personal;
 
 import Data.RepositorioPersonal;
-import Negocio.Exception.Exception;
 
 public class GerenciarPersonal {
     private RepositorioPersonal rPersonal;

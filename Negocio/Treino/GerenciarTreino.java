@@ -21,6 +21,11 @@ public class GerenciarTreino {
         rTreino.excluirTreino(treinoAExcluir);
     }
 
+    public void exibirTreinos() {
+        rTreino.exibirTreinos();
+    }
+
+
     public String toString() {
         return rTreino.toString();
     }

@@ -48,6 +48,14 @@ public class Fachada implements IFachada {
     this.gTreino.excluirTreino(treino);
   }
 
+  public void exibirTreinos() {
+    gTreino.exibirTreinos();
+  }
+
+  public void exibirAlunos() {
+    gAluno.exibirAlunos();
+  }
+
   public String toString() {
     return gTreino.toString();
   }

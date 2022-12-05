@@ -18,4 +18,8 @@ public interface IFachada {
   public Treino buscarTreino(int matr) throws Exception;
 
   public void excluirTreino(Treino treino);
+
+  public void exibirTreinos();
+
+  public void exibirAlunos();
 }
