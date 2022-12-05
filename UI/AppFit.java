@@ -115,8 +115,9 @@ public class AppFit {
 								matrAluno = Al.nextInt();
 								Treino treinoBuscado = fachada.buscarTreino(matrAluno);
 								fachada.excluirTreino(treinoBuscado);
+								System.out.println(" ");
 								System.out.println("Insira o novo treino: ");
-								treino = Al.nextLine();
+								treino = Al.nextLine(); Al.next();
 								trei = new Treino(matrAluno, treino);
 								fachada.adicionarTreino(trei);
 								break;
@@ -126,8 +127,9 @@ public class AppFit {
 							case 3: // Criação do treino 
 								System.out.println("Insira a matrícula do aluno: ");
 								matrAluno = Al.nextInt();
+								System.out.println(" ");
 								System.out.println("Insira o treino: ");
-								treino = Al.nextLine();
+								treino = Al.nextLine(); Al.next();
 								trei = new Treino(matrAluno, treino);
 								fachada.adicionarTreino(trei);
 								break;
