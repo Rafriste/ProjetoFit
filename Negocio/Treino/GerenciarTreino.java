@@ -1,32 +1,53 @@
 package Negocio.Treino;
 
-import Data.RepositorioTreino;
+import java.util.ArrayList;
+import Negocio.Exception.TreinoNaoEncontradoException;
 
 public class GerenciarTreino {
-    private RepositorioTreino rTreino;
+    private ArrayList<Treino> treinoLista;
+
+    public GerenciarTreino() {
+        this.treinoLista = new ArrayList();
+    }
 
     public boolean treinoExistente(int matr) {
-        return rTreino.treinoExistente(matr);
+        for (Treino checarTreino : treinoLista) {
+            if (checarTreino.getMatr() == matr) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void adicionarTreino(Treino treinoNovo) {
-        rTreino.adicionarTreino(treinoNovo);
-    }
-
-    public Treino buscarTreino(int matr) throws Exception {
-        return rTreino.buscarTreino(matr);
+        if (!treinoExistente(treinoNovo.getMatr())) {
+            treinoLista.add(new Treino(treinoNovo.getMatr(), treinoNovo.getTreino()));
+        }
     }
 
     public void excluirTreino(Treino treinoAExcluir) {
-        rTreino.excluirTreino(treinoAExcluir);
+        treinoLista.remove(treinoAExcluir);
+    }
+
+    public Treino buscarTreino(int matr) throws Exception {
+        if (!treinoExistente(matr)) {
+            throw new TreinoNaoEncontradoException();
+        }
+        for (Treino checarTreino : treinoLista) {
+            if (checarTreino.getMatr() == matr) {
+                return checarTreino;
+            }
+
+        }
+        return null;
     }
 
     public void exibirTreinos() {
-        rTreino.exibirTreinos();
+        System.out.println(treinoLista);
     }
 
-
+    @Override
     public String toString() {
-        return rTreino.toString();
+        return "[Lista de treinos cadastrados : " + treinoLista + "]";
     }
 }

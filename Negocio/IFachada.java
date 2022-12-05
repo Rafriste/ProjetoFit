@@ -5,7 +5,7 @@ import Negocio.Personal.Personal;
 import Negocio.Treino.Treino;
 
 public interface IFachada {
-  public void adicionarUsuario(Aluno aluno);
+  public void adicionarAluno(Aluno aluno);
 
   public void adicionarPerso(Personal personal);
 

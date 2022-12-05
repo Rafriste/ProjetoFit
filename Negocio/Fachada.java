@@ -18,9 +18,8 @@ public class Fachada implements IFachada {
     this.gTreino = new GerenciarTreino();
   }
 
-  @Override
-  public void adicionarUsuario(Aluno aluno) {
-    this.gAluno.adicionarUsuario(aluno);
+  public void adicionarAluno(Aluno aluno) {
+    this.gAluno.adicionarAluno(aluno);
   }
 
   public void adicionarPerso(Personal personal) {
@@ -31,7 +30,6 @@ public class Fachada implements IFachada {
     this.gTreino.adicionarTreino(treino);
   }
 
-  @Override
   public Aluno buscarAluno(int matr) throws Exception {
     return this.gAluno.buscarAluno(matr);
   }
