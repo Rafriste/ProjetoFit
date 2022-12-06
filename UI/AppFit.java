@@ -77,14 +77,15 @@ public class AppFit {
 				case 1: // exibindo menu do aluno
 					System.out.println("Insira sua matrícula: ");
 					matr = Al.nextInt();
-					System.out.println("Insira sua senha: ");
-					senha = Al.next();
-					if (fachada.buscarSenhaAluno(matr, senha) != null) {
-						exibeMenuTreino();
-						dia = Al.nextInt();
-						Al.nextLine();
-						switch (dia) {
-							case 1: // imprime o treino
+					if (fachada.buscarAluno(matr) != null) {
+						System.out.println("Insira sua senha: ");
+						senha = Al.next();
+						if (fachada.buscarSenha(senha) != null){
+							exibeMenuTreino();
+							dia = Al.nextInt();
+							Al.nextLine();
+							switch (dia) {
+								case 1: // imprime o treino
 								Treino treinoBuscado = fachada.buscarTreino(matr);
 								treinoBuscado.toString();
 								System.out.println("=====BOM TREINO=====");
@@ -98,6 +99,8 @@ public class AppFit {
 								System.out.println("Opção inválida");
 						}
 						break;
+					}
+					break;
 					}
 
 				case 2: // exibindo o menu do personal.

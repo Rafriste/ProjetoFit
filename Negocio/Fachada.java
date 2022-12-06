@@ -34,8 +34,8 @@ public class Fachada implements IFachada {
     return this.gAluno.buscarAluno(matr);
   }
 
-  public Aluno buscarSenhaAluno(int matr, String senha) throws Exception {
-    return this.gAluno.buscarSenhaAluno(matr, senha);
+  public Aluno buscarSenha(String senha) throws Exception {
+    return this.gAluno.buscarSenha(senha);
   }
 
   public Personal buscarPersonal(int matr) throws Exception {

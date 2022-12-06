@@ -13,7 +13,7 @@ public interface IFachada {
 
   public Aluno buscarAluno(int matr) throws Exception;
 
-  public Aluno buscarSenhaAluno(int matr, String senha) throws Exception;
+  public Aluno buscarSenha(String senha) throws Exception;
 
   public Personal buscarPersonal(int matr) throws Exception;
 

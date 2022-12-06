@@ -20,6 +20,15 @@ public class GerenciarAluno {
     return false;
   }
 
+  public boolean senhaExistente(String senha) {
+    for (Aluno checarAluno : alunoLista) {
+      if (checarAluno.getSenha() == senha) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   public void adicionarAluno(Aluno alunoNovo) {
     if (!alunoExistente(alunoNovo.getMatr())) {
       alunoLista.add(new Aluno(alunoNovo.getNome(), alunoNovo.getSenha(), alunoNovo.getMatr()));
@@ -39,14 +48,15 @@ public class GerenciarAluno {
     return null;
   }
 
-  public Aluno buscarSenhaAluno(int matr, String senha) throws Exception {
-    Aluno al = new Aluno(matr, senha);
-    if (buscarAluno(matr) != null) {
-      if (al.compareTo(al) == 0) {
-      return al;
-      } else {
-        return null;
+  public Aluno buscarSenha(String senha) throws Exception {
+    if (!senhaExistente(senha)) {
+      throw new AlunoNaoEncontradoException();
+    }
+    for (Aluno checarSenha : alunoLista) {
+      if (checarSenha.getSenha() == senha) {
+        return checarSenha;
       }
+
     }
     return null;
   }
