@@ -44,7 +44,6 @@ public class GerenciarAluno {
       if (checarAluno.getMatr() == matr) {
         return checarAluno;
       }
-
     }
     return null;
   }
@@ -57,7 +56,6 @@ public class GerenciarAluno {
       if (checarSenha.getSenha() == senha) {
         return checarSenha;
       }
-
     }
     return null;
   }
