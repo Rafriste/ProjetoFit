@@ -13,13 +13,13 @@ public interface IFachada {
 
   public Aluno buscarAluno(int matr) throws Exception;
 
+  public Aluno buscarSenhaAluno(int matr, String senha) throws Exception;
+
   public Personal buscarPersonal(int matr) throws Exception;
 
   public Treino buscarTreino(int matr) throws Exception;
 
   public void excluirTreino(Treino treino);
-
-  public void exibirTreino(int matr);
 
   public void exibirTreinos();
 
