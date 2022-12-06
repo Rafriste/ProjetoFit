@@ -34,6 +34,10 @@ public class Fachada implements IFachada {
     return this.gAluno.buscarAluno(matr);
   }
 
+  public Aluno buscarSenhaAluno(int matr, String senha) throws Exception {
+    return this.gAluno.buscarSenhaAluno(matr, senha);
+  }
+
   public Personal buscarPersonal(int matr) throws Exception {
     return this.gPersonal.buscarPersonal(matr);
   }
@@ -52,10 +56,6 @@ public class Fachada implements IFachada {
 
   public void exibirAlunos() {
     gAluno.exibirAlunos();
-  }
-
-  public void exibirTreino(int matr){
-    this.gTreino.exibirTreino(matr);
   }
 
   public String toString() {
