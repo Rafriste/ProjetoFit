@@ -3,6 +3,7 @@ package Negocio.Aluno;
 import java.util.ArrayList;
 
 import Negocio.Exception.AlunoNaoEncontradoException;
+import Negocio.Exception.SenhaNaoEncontradaException;
 
 public class GerenciarAluno {
   private ArrayList<Aluno> alunoLista;
@@ -21,8 +22,8 @@ public class GerenciarAluno {
   }
 
   public boolean senhaExistente(String senha) {
-    for (Aluno checarAluno : alunoLista) {
-      if (checarAluno.getSenha() == senha) {
+    for (Aluno checarSenha : alunoLista) {
+      if (checarSenha.getSenha() == senha) {
         return true;
       }
     }
@@ -50,7 +51,7 @@ public class GerenciarAluno {
 
   public Aluno buscarSenha(String senha) throws Exception {
     if (!senhaExistente(senha)) {
-      throw new AlunoNaoEncontradoException();
+      throw new SenhaNaoEncontradaException();
     }
     for (Aluno checarSenha : alunoLista) {
       if (checarSenha.getSenha() == senha) {
