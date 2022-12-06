@@ -12,7 +12,7 @@ public class GerenciarAluno {
   }
 
   public boolean alunoExistente(int matr) {
-    for (Aluno checarAluno: alunoLista) {
+    for (Aluno checarAluno : alunoLista) {
       if (checarAluno.getMatr() == matr) {
         return true;
       }
@@ -39,13 +39,25 @@ public class GerenciarAluno {
     return null;
   }
 
+  public Aluno buscarSenhaAluno(int matr, String senha) throws Exception {
+    Aluno al = new Aluno(matr, senha);
+    if (buscarAluno(matr) != null) {
+      if (al.compareTo(al) == 0) {
+      return al;
+      } else {
+        return null;
+      }
+    }
+    return null;
+  }
+
   public void exibirAlunos() {
     System.out.println(alunoLista);
-}
+  }
 
   @Override
   public String toString() {
     return "[Lista de alunos cadastrados : " + alunoLista + "]";
   }
-  
+
 }
