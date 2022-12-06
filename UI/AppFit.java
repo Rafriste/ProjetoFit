@@ -77,16 +77,16 @@ public class AppFit {
 				case 1: // exibindo menu do aluno
 					System.out.println("Insira sua matrícula: ");
 					matr = Al.nextInt();
-					fachada.buscarAluno(matr);
-					if (fachada.buscarAluno(matr) != null) {
+					System.out.println("Insira sua senha: ");
+					senha = Al.next();
+					if (fachada.buscarSenhaAluno(matr, senha) != null) {
 						exibeMenuTreino();
 						dia = Al.nextInt();
 						Al.nextLine();
 						switch (dia) {
 							case 1: // imprime o treino
-								
-								fachada.exibirTreino(matr);
-								
+								Treino treinoBuscado = fachada.buscarTreino(matr);
+								treinoBuscado.toString();
 								System.out.println("=====BOM TREINO=====");
 								DiaMalhado++;
 								System.out.println("Dias malhados: " + DiaMalhado);
@@ -118,7 +118,7 @@ public class AppFit {
 								fachada.excluirTreino(treinoBuscado);
 								System.out.println(" ");
 								System.out.println("Insira o novo treino: ");
-								treino = Al.next();
+								treino = Al.nextLine(); Al.next();
 								trei = new Treino(matrAluno, treino);
 								fachada.adicionarTreino(trei);
 								break;
@@ -130,7 +130,7 @@ public class AppFit {
 								matrAluno = Al.nextInt();
 								System.out.println(" ");
 								System.out.println("Insira o treino: ");
-								treino = Al.next();
+								treino = Al.nextLine(); Al.next();
 								trei = new Treino(matrAluno, treino);
 								fachada.adicionarTreino(trei);
 								break;
